@@ -1,5 +1,5 @@
-site_name: NadekoBot
-repo_url: https://github.com/Kwoth/NadekoBot
+site_name: AvidBot
+repo_url: https://github.com/reddyross/AVID
 pages:
 - Home: index.md
 - About: about.md
