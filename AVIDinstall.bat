@@ -1,15 +1,15 @@
 @ECHO OFF
-TITLE AViD Client
+TITLE AVID Client
 SET root=%~dp0
 CD /D %root%
 
 CLS
-ECHO 1.Download Latest Build From Nadeko
-ECHO 2.Download Stable Build From Nadeko
-ECHO 3.Run BMOC (normally)
-ECHO 4.Run BMOC with Auto Restart (check if bmoc is working properly before using this)
+ECHO 1.Download Latest Build From Avid
+ECHO 2.Download Stable Build From Avid
+ECHO 3.Run Avid (normally)
+ECHO 4.Run Avid with Auto Restart (check if it is working properly before using this)
 ECHO 5.To exit
-ECHO 6.Install ffmpeg (for music)
+ECHO 6.Install Nadeko's ffmpeg (for music)
 ECHO.
 ECHO Make sure you are running as Administrator
 ECHO.
@@ -26,10 +26,10 @@ IF ERRORLEVEL 1 GOTO latest
 :latest
 ECHO Make sure you are running it on Windows 8 or later.
 timeout /t 10
-ECHO Downloading NadekoBot (Latest), please wait...
+ECHO Downloading Avid (Latest), please wait...
 SET "FILENAME=%~dp0\Latest.bat"
 bitsadmin.exe /transfer "Downloading Nadeko (Latest)" /priority high https://github.com/Kwoth/NadekoBot/raw/master/scripts/Latest.bat "%FILENAME%"
-ECHO NadekoBot Dev Build (latest) downloaded.
+ECHO Avid Dev Build (latest) downloaded.
 timeout /t 5
 CALL Latest.bat
 GOTO End
@@ -37,10 +37,10 @@ GOTO End
 :stable
 ECHO Make sure you are running it on Windows 8 or later.
 timeout /t 10
-ECHO Downloading NadekoBot (Stable), please wait...
+ECHO Downloading Avid (Stable), please wait...
 SET "FILENAME=%~dp0\Stable.bat"
 bitsadmin.exe /transfer "Downloading Nadeko (Stable)" /priority high https://github.com/Kwoth/NadekoBot/raw/master/scripts/Stable.bat "%FILENAME%"
-ECHO NadekoBot Stable build downloaded.
+ECHO Avid Stable build downloaded.
 timeout /t 5
 CALL Stable.bat
 GOTO End
@@ -56,7 +56,7 @@ CALL NadekoRunNormal.bat
 GOTO End
 
 :autorestart
-ECHO Downloading NadekoBot Auto Run, please wait...
+ECHO Downloading Avid Auto Run, please wait...
 SET "FILENAME=%~dp0\NadekoAutoRun.bat"
 bitsadmin.exe /transfer "Downloading Nadeko Auto-Run" /priority high https://github.com/Kwoth/NadekoBot/raw/master/scripts/NadekoAutoRun.bat "%FILENAME%"
 ECHO.
@@ -75,7 +75,7 @@ ECHO.
 ECHO Installing ffmpeg in "%SystemDrive%\ffmpeg\"...
 ECHO.
 ECHO Make sure you are running this as Administrator! 
-ECHO If not, then please restart "NadekoInstaller.bat" as Administrator.
+ECHO If not, then please restart "AVIDinstall.bat" as Administrator.
 ECHO.
 ECHO DO NOT USE "Windows PowerShell" for ffmpeg Installation!
 ECHO.
@@ -97,4 +97,4 @@ GOTO End
 
 :End
 pause
-CALL NadekoInstaller.bat
+CALL AVIDinstall.bat
