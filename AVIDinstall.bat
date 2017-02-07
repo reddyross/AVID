@@ -13,6 +13,7 @@ ECHO 6.Install Nadeko's ffmpeg (for music)
 ECHO.
 ECHO Make sure you are running as Administrator
 ECHO.
+ECHO Don't try to install ffmpeg multiple times-- only if error with initial install
 CHOICE /C 123456 /M "Enter your choice:"
 
 :: Note - list ERRORLEVELS in decreasing order
